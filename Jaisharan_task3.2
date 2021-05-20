@@ -1,0 +1,15 @@
+SYSTEM_THREAD(ENABLED);
+
+
+void setup() {
+    
+}
+
+void loop() {
+
+    int lightlevel=random(0,300);
+    if (lightlevel >= 100) Particle.publish("sun","up",PRIVATE);
+   else  Particle.publish("sun","down",PRIVATE);
+    delay(10000);
+
+}
